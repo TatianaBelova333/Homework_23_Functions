@@ -7,7 +7,7 @@ from flask import abort
 def map_(iter_obj: Iterable, col_num: str) -> Iterable:
     """Returns column by column number"""
     col_patterns = {
-        '0': r'\d{1,4}\.\d{1,4}\.\d{1,4}\.\d{1,4}',
+        '0': r'(\d{1,3}\.){3}\d{1,3}',
         '1': r'\s-\s',
         '2': r'\B\s-\s',
         '3': r"\[.+\]",
